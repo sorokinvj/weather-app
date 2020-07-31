@@ -10,7 +10,7 @@ const APPStyled = styled.div`
 `
 interface IApp {}
 const App: React.FC<IApp> = () => {
-  return <APPStyled>There will be weather app</APPStyled>
+  return <APPStyled data-testid="app">There will be а weather app</APPStyled>
 }
 
 export default App
