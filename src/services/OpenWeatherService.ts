@@ -1,10 +1,4 @@
-import Config from './Config'
 import CoreAPI from './CoreAPI'
-
-interface IDocument {
-  content: string
-  format: string
-}
 
 /* Logic for Documents in core api */
 class OpenWeatherService extends CoreAPI {

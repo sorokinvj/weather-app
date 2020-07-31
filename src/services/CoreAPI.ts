@@ -33,7 +33,7 @@ class CoreAPI {
         'Content-Type': 'application/json',
       },
     }
-    const requestURL = `${Config.endPoint}${url}&${Config.apiKey}`
+    const requestURL = `${Config.endPoint}${url}&appid=${Config.apiKey}`
 
     const response = await axios.get(requestURL, {
       ...config,
