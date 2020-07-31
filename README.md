@@ -4,6 +4,14 @@ The app allows users to input a UK city and get a 3 day Weather Forecast from Op
 
 ## Run the project
 
+### Add API key
+
+Create .env file on the project root level and add API key via REACT_APP_WEATHER_API_KEY:
+
+'''
+REACT_APP_WEATHER_API_KEY=5131090e770e50547e63d134d3b19a9a
+'''
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />
@@ -26,9 +34,3 @@ Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br />
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

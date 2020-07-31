@@ -13,7 +13,6 @@ const App: React.FC<IApp> = () => {
   useEffect(() => {
     const fetchWeather = async (city: string) => {
       const res = await OpenWeatherService.getWeather(city)
-      console.log(res)
       setForecastResponse(res)
     }
     fetchWeather('London')
