@@ -13,7 +13,7 @@ export const SuggestStyled = styled.div`
       padding-left: 20px;
       font-size: 1.6rem;
       font-weight: 400;
-      font-family: Open Sans, sans-serif;
+      font-family: 'Open Sans', sans-serif;
       color: #7d7d7d;
 
       &:focus {
@@ -31,7 +31,7 @@ export const SuggestStyled = styled.div`
       background: #f5ce00;
       padding: 0 2rem;
       color: #4c4b4b;
-      font-family: Open Sans, sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-size: 1rem;
       cursor: pointer;
       &:focus {
@@ -41,6 +41,8 @@ export const SuggestStyled = styled.div`
   }
   .suggest-box {
     padding: 1rem;
+    position: absolute;
+    width: calc(100% - 10rem);
   }
   .city-option {
     list-style: none;

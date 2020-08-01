@@ -42,6 +42,7 @@ const Suggest: React.FC<ISuggest> = ({ selectCityID }) => {
     selectSuggestOption(true)
     setValue(name)
     selectCityID(id)
+    setValue('')
   }
 
   // list item component for react-window List

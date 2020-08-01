@@ -18,6 +18,6 @@ export const AppStyled = styled.div`
     margin: 10rem 0 5rem;
     color: #ffeace;
     font-weight: 300;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 `
