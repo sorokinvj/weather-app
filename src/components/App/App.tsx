@@ -13,13 +13,11 @@ import SearchResults from '../SearchResults/SearchResults'
 import GlobalStyles from './globalStyles'
 import { AppStyled } from './AppStyled'
 
-import sky from './sky.jpg'
-
 const App: React.FC = () => {
   return (
     <SearchResultsProvider>
       <GlobalStyles />
-      <AppStyled data-testid="app" back={sky}>
+      <AppStyled data-testid="app">
         <h1 className="app-title">3-day Weather foreacast in UK</h1>
         <Suggest />
         <SearchResults />

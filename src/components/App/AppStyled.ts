@@ -1,17 +1,12 @@
 import styled from 'styled-components/macro'
 
-interface StyledProps {
-  back: string
-}
-
 export const AppStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background: ${(props: StyledProps) => `url(${props.back})`};
-  background-size: cover;
-  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 1000px;
   padding: 0 10rem 10rem;
 
   .app-title {
