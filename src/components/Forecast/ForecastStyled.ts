@@ -6,8 +6,10 @@ export const ForecastStyled = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  padding-bottom: 2rem;
   &:not(:last-of-type) {
     margin-bottom: 3rem;
+    border-bottom: 1px solid #c1c1c1;
   }
   .city-name {
     font-style: normal;

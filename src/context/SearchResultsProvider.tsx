@@ -58,18 +58,6 @@ const reducer = (prevState: IState, action: IAction) => {
         status: 'failure',
         error: (action as IRejectAction).payload,
       }
-    case 'cancel':
-      return {
-        ...prevState,
-        status: 'idle',
-        error: undefined,
-      }
-    case 'reset':
-      return {
-        status: 'idle',
-        error: undefined,
-        searchResults: [],
-      }
     default:
       throw new Error(`Unhandled action type: ${action.type}`)
   }

@@ -52,9 +52,4 @@ export const SuggestStyled = styled.div`
       text-decoration: underline;
     }
   }
-
-  .error-message {
-    padding-left: 1rem;
-    color: #ff4f0a;
-  }
 `

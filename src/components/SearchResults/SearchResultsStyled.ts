@@ -5,4 +5,9 @@ export const SearchResultsStyled = styled.div`
   flex-direction: column;
   width: 100%;
   margin-top: 10rem;
+
+  .error-message {
+    padding-left: 0;
+    text-align: center;
+  }
 `

@@ -23,6 +23,12 @@ const App: React.FC = () => {
         <h1 className="app-title">3-day Weather foreacast in UK</h1>
         <Suggest />
         <SearchResults />
+        <p className="thanks">
+          Powered by OpenWeather{' '}
+          <a href="https://openweathermap.org/forecast5" rel="noopener noreferrer" target="_blank">
+            API
+          </a>
+        </p>
       </AppStyled>
     </SearchResultsProvider>
   )
