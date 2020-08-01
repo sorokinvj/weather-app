@@ -7,8 +7,8 @@ class OpenWeatherService extends CoreAPI {
    *
    * @param city - a name of the city for weather forecast
    */
-  public async getWeather(city: string) {
-    return await this.getRequest(`?q=${city}&units=metric`)
+  public async getWeather(city: number) {
+    return await this.getRequest(`?id=${city}&units=metric`)
   }
 }
 
