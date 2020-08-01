@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import { useDebounce } from 'use-debounce'
+import { FixedSizeList as List } from 'react-window'
 
 // data
 import cities from './ukCitiesSorted.json'
@@ -16,11 +17,15 @@ const Autocomplete: React.FC = () => {
     [debouncedCity]
   )
 
+  const Row = ({ index, style, data }: any) => <p style={style}>{data[index].name}</p>
+
   return (
     <>
       <input value={value} onChange={onChange} />
       <p>{debouncedCity}</p>
-      {debouncedCity ? filteredList.map((city) => <p key={city.id}>{city.name}</p>) : null}
+      <List height={150} itemCount={filteredList.length} itemSize={35} width={300} itemData={filteredList}>
+        {Row}
+      </List>
     </>
   )
 }
