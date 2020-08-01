@@ -11,6 +11,15 @@ import { SuggestStyled } from './SuggestStyled'
 // data
 import cities from '../../ukCitiesSorted.json'
 
+const findCityIdByName = (name: string) => {
+  const foundCity = cities.find((city) => city.name.toLowerCase() === name.toLowerCase())
+  if (foundCity) {
+    return foundCity.id
+  } else {
+    throw new Error("Sorry, we don't have this city in our database. Maybe it doesn't exist?")
+  }
+}
+
 interface ISuggest {
   selectCityID: (cityID: number) => void
 }
@@ -23,10 +32,17 @@ const Suggest: React.FC<ISuggest> = ({ selectCityID }) => {
     setValue(event.target.value)
   }
 
+  const [errorState, setError] = useState<string | undefined>(undefined)
+
   // form handlers
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    console.log('submit happened')
+    try {
+      selectCityID(findCityIdByName(value))
+      setValue('')
+    } catch (error) {
+      setError(error)
+    }
   }
 
   // filter suggest list with debounced input value
@@ -58,14 +74,21 @@ const Suggest: React.FC<ISuggest> = ({ selectCityID }) => {
   )
 
   return (
-    <SuggestStyled>
+    <SuggestStyled data-testid="suggest">
       <form className="search" onSubmit={onSubmit}>
-        <input value={value} onChange={onChange} className="search-input" placeholder="Type in the city name" />
+        <input
+          value={value}
+          onChange={onChange}
+          className="search-input"
+          placeholder="Type in the city name"
+          alt="input city"
+        />
         <button className="search-button" type="submit">
           Search
         </button>
       </form>
-      <div className="suggest-box">
+      {errorState ? <p className="error-message">{errorState}</p> : null}
+      <div className="suggest-box" data-testid="suggest-box">
         {value.length
           ? !isSelected && (
               <List height={150} itemCount={filteredList.length} itemSize={30} itemData={filteredList}>

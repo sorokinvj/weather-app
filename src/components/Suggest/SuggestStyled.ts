@@ -42,7 +42,7 @@ export const SuggestStyled = styled.div`
   .suggest-box {
     padding: 1rem;
     position: absolute;
-    width: calc(100% - 10rem);
+    width: calc(100% - 30rem);
   }
   .city-option {
     list-style: none;
