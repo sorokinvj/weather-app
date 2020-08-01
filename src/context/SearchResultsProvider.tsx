@@ -1,20 +1,13 @@
 import React from 'react'
 import { ForecastResponse } from '../types/ForecastResponse'
-import { uuid } from 'uuidv4'
+import { v4 as uuidv4 } from 'uuid'
 import OpenWeatherService from '../services/OpenWeatherService'
-
-// import { document as documentService } from '../services'
 
 /* Our state will have:
   status: like a state machine
   error: when there is an error message
   searchResults: will hold our search history in a state
 */
-// export interface IDocuments {
-//   front: { id: string; file: string } | null
-//   back: { id: string; file: string } | null
-//   selfie: { id: string; file: string } | null
-// }
 
 export interface ISearchResult {
   result: ForecastResponse
@@ -112,7 +105,7 @@ const fetchWeather = async (dispatch: IDispatch, cityID: number) => {
   dispatch({ type: 'create' })
   try {
     const result = await OpenWeatherService.getWeather(cityID)
-    dispatch({ type: 'resolve', payload: { id: uuid(), result } })
+    dispatch({ type: 'resolve', payload: { id: uuidv4(), result } })
   } catch (error) {
     dispatch({ type: 'reject', payload: OpenWeatherService.errorMessage(error) })
   }

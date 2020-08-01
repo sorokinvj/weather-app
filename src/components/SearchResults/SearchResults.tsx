@@ -2,7 +2,7 @@ import React from 'react'
 import { ISearchResult, useSearchState } from '../../context/SearchResultsProvider'
 import Forecast from '../Forecast/Forecast'
 import { SearchResultsStyled } from './SearchResultsStyled'
-import Loading from '../Loading/Loading'
+// import Loading from '../Loading/Loading'
 
 const SearchResults: React.FC = () => {
   const searchState = useSearchState()
