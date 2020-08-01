@@ -1,39 +1,34 @@
 // core libs
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+
+// search state
+import { SearchResultsProvider } from '../../context/SearchResultsProvider'
 
 // components
 import Suggest from '../Suggest/Suggest'
-import Forecast from '../Forecast/Forecast'
-// service
-import OpenWeatherService from '../../services/OpenWeatherService'
-import sky from './sky.jpg'
+
+import SearchResults from '../SearchResults/SearchResults'
 
 // styles
 import GlobalStyles from './globalStyles'
 import { AppStyled } from './AppStyled'
 
 const App: React.FC = () => {
-  const [forecastResponse, setForecastResponse] = useState<any>(null)
-  const [selectedCityID, selectCityID] = useState<number | undefined>(undefined)
-  useEffect(() => {
-    const fetchWeather = async (cityID: number) => {
-      const res = await OpenWeatherService.getWeather(cityID)
-      setForecastResponse(res)
-    }
-    if (selectedCityID) {
-      fetchWeather(selectedCityID)
-    }
-  }, [selectedCityID])
-
   return (
-    <>
+    <SearchResultsProvider>
       <GlobalStyles />
-      <AppStyled data-testid="app" back={sky}>
+      <AppStyled data-testid="app">
         <h1 className="app-title">3-day Weather foreacast in UK</h1>
-        <Suggest selectCityID={selectCityID} />
-        {forecastResponse ? <Forecast forecast={forecastResponse} /> : null}
+        <Suggest />
+        <SearchResults />
+        <p className="thanks">
+          Powered by OpenWeather{' '}
+          <a href="https://openweathermap.org/forecast5" rel="noopener noreferrer" target="_blank">
+            API
+          </a>
+        </p>
       </AppStyled>
-    </>
+    </SearchResultsProvider>
   )
 }
 

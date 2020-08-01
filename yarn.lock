@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@alfonmga/react-lottie-light-ts@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@alfonmga/react-lottie-light-ts/-/react-lottie-light-ts-0.0.1.tgz#06f99ba72c0b9d148004d7261893e909dd786d45"
+  integrity sha512-rdSuaCyWZ2Tq/UR9w3kkrTSoQCcUJjf/jSG2RNEL8615T1pgMk92kKJOxY0Y3rmuWj5Nn8S7/IQ4mDTNWXCjgQ==
+  dependencies:
+    lottie-web "5.5.9"
+
 "@babel/code-frame@7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"
@@ -887,7 +894,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
 
-"@babel/plugin-transform-typescript@^7.9.0":
+"@babel/plugin-transform-typescript@^7.10.4", "@babel/plugin-transform-typescript@^7.9.0":
   version "7.11.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.11.0.tgz#2b4879676af37342ebb278216dd090ac67f13abb"
   integrity sha512-edJsNzTtvb3MaXQwj8403B7mZoGu9ElDJQZOKjGUnvilquxBA3IQoEIOvkX/1O8xfAsnHS/oQhe2w/IXrr+w0w==
@@ -1094,6 +1101,14 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.3"
     "@babel/plugin-transform-typescript" "^7.9.0"
+
+"@babel/preset-typescript@^7.10.4":
+  version "7.10.4"
+  resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.10.4.tgz#7d5d052e52a682480d6e2cc5aa31be61c8c25e36"
+  integrity sha512-SdYnvGPv+bLlwkF2VkJnaX/ni1sMNetcGI1+nThF1gyv6Ph8Qucc4ZZAjM5yZcE/AKRXIOTZz7eSRDWOEjPyRQ==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.10.4"
+    "@babel/plugin-transform-typescript" "^7.10.4"
 
 "@babel/runtime-corejs3@^7.10.2", "@babel/runtime-corejs3@^7.8.3":
   version "7.11.0"
@@ -1771,6 +1786,11 @@
   dependencies:
     "@types/jest" "*"
 
+"@types/uuid@8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-8.0.0.tgz#165aae4819ad2174a17476dbe66feebd549556c0"
+  integrity sha512-xSQfNcvOiE5f9dyd4Kzxbof1aTrLobL278pGLKOZI6esGfZ7ts9Ka16CzIN6Y8hFHE1C7jIBZokULhK1bOgjRw==
+
 "@types/yargs-parser@*":
   version "15.0.0"
   resolved "https://registry.yarnpkg.com/@types/yargs-parser/-/yargs-parser-15.0.0.tgz#cb3f9f741869e20cce330ffbeb9271590483882d"
@@ -2047,6 +2067,11 @@ acorn@^7.1.1:
   version "7.3.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.3.1.tgz#85010754db53c3fbaf3b9ea3e083aa5c5d147ffd"
   integrity sha512-tLc0wSnatxAQHVHUapaHdz72pi9KUyHjq5KyHjGg9Y8Ifdc79pTh2XvI6I1/chZbnM7QtNKzh66ooDogPZSleA==
+
+add@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
+  integrity sha1-JI8Kn25aUo7yKV2+7DBTITCuIjU=
 
 address@1.1.2, address@^1.0.1:
   version "1.1.2"
@@ -7057,6 +7082,11 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+lottie-web@5.5.9:
+  version "5.5.9"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.5.9.tgz#f8775e8c36dfada428f9acea826ab674750419a8"
+  integrity sha512-3Zdxnuyi6WXnMj+0ZfwDd17EXCM87Hcbhd+sVFq6EPGfkVoGzoIkZt9OafcgXw4mzjyILOkPDLaBumrgGKoCaw==
+
 lower-case@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/lower-case/-/lower-case-2.0.1.tgz#39eeb36e396115cc05e29422eaea9e692c9408c7"
@@ -11054,10 +11084,23 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
+uuid@8.3.0, uuid@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
+  integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
+
 uuid@^3.0.1, uuid@^3.3.2:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+uuidv4@^6.2.1:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/uuidv4/-/uuidv4-6.2.1.tgz#141aa9b9032886280ff844d63e1460d221e0460b"
+  integrity sha512-Jtwt2Nb5JqdIR1WW84SeIOoaKQ1YMY1Ys7L8tFqmWDl857PQpWDe5OQ2QAp1yfcyPvafNAxXQbMpG7cjC2m4YQ==
+  dependencies:
+    "@types/uuid" "8.0.0"
+    uuid "8.3.0"
 
 v8-compile-cache@^2.0.3:
   version "2.1.1"
@@ -11657,3 +11700,8 @@ yargs@^13.3.0:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^13.1.2"
+
+yarn@^1.22.4:
+  version "1.22.4"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.4.tgz#01c1197ca5b27f21edc8bc472cd4c8ce0e5a470e"
+  integrity sha512-oYM7hi/lIWm9bCoDMEWgffW8aiNZXCWeZ1/tGy0DWrN6vmzjCXIKu2Y21o8DYVBUtiktwKcNoxyGl/2iKLUNGA==
