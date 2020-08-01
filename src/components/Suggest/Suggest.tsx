@@ -28,6 +28,7 @@ const Suggest: React.FC<ISuggest> = ({ selectCityID }) => {
   // input handlers
   const [value, setValue] = useState('')
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setError(undefined)
     selectSuggestOption(false)
     setValue(event.target.value)
   }
@@ -41,7 +42,7 @@ const Suggest: React.FC<ISuggest> = ({ selectCityID }) => {
       selectCityID(findCityIdByName(value))
       setValue('')
     } catch (error) {
-      setError(error)
+      setError(error.message)
     }
   }
 
@@ -87,11 +88,15 @@ const Suggest: React.FC<ISuggest> = ({ selectCityID }) => {
           Search
         </button>
       </form>
-      {errorState ? <p className="error-message">{errorState}</p> : null}
+      {errorState ? (
+        <p className="error-message" data-testid="error-message">
+          {errorState}
+        </p>
+      ) : null}
       <div className="suggest-box" data-testid="suggest-box">
         {value.length
           ? !isSelected && (
-              <List height={150} itemCount={filteredList.length} itemSize={30} itemData={filteredList}>
+              <List width={500} height={150} itemCount={filteredList.length} itemSize={30} itemData={filteredList}>
                 {Item}
               </List>
             )

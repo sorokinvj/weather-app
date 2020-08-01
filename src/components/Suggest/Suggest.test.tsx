@@ -32,4 +32,17 @@ describe('<Suggest />', () => {
 
     expect(selectCityID).toBeCalled()
   })
+
+  test('error message when city is not in db', async () => {
+    const selectCityID = jest.fn()
+    render(<SuggestComponent selectCityID={selectCityID} />)
+
+    const input = screen.getByAltText('input city')
+    fireEvent.change(input, { target: { value: 'fdlkjlsdjldsjflkdsj' } })
+
+    fireEvent.click(screen.getByText(/Search/))
+
+    const error = await screen.getByTestId('error-message')
+    expect(error).toBeInTheDocument()
+  })
 })

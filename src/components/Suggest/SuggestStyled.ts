@@ -46,9 +46,15 @@ export const SuggestStyled = styled.div`
   }
   .city-option {
     list-style: none;
+    color: #9f9f9f;
     &:hover {
       cursor: pointer;
       text-decoration: underline;
     }
+  }
+
+  .error-message {
+    padding-left: 1rem;
+    color: #ff4f0a;
   }
 `

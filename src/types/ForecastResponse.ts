@@ -6,6 +6,7 @@ export interface ForecastData {
   dt: number
   dt_txt: number
   main: WeatherParams
+  weather: WeatherMeta[]
 }
 
 interface WeatherMeta {
@@ -18,5 +19,4 @@ export interface ForecastResponse {
   city: {
     name: string
   }
-  weather: WeatherMeta[]
 }
