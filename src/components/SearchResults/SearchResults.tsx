@@ -16,8 +16,8 @@ const SearchResults: React.FC = () => {
           {searchState.error}
         </p>
       )}
-      {searchState.searchResults.map((item: ISearchResult) => (
-        <Forecast forecast={item.result} key={item.id} />
+      {searchState.searchResults.map((item: ISearchResult, index: number) => (
+        <Forecast forecast={item.result} key={item.id} index={index} />
       ))}
     </SearchResultsStyled>
   )

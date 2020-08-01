@@ -1,5 +1,9 @@
 import styled from 'styled-components/macro'
 
+interface StyleProps {
+  index: number
+}
+
 export const ForecastStyled = styled.div`
   width: 100%;
   display: flex;
@@ -7,6 +11,7 @@ export const ForecastStyled = styled.div`
   align-items: center;
   justify-content: space-evenly;
   padding-bottom: 2rem;
+  opacity: ${(props: StyleProps) => (props.index < 4 ? 1 - props.index * 0.2 : 0.5 - props.index * 0.03)};
   &:not(:last-of-type) {
     margin-bottom: 3rem;
     border-bottom: 1px solid #c1c1c1;

@@ -6,10 +6,9 @@ import { ForecastStyled } from './ForecastStyled'
 import ForecastCard from './ForecastCard'
 interface IForecast {
   forecast: ForecastResponse
+  index: number
 }
-const Forecast: React.FC<IForecast> = ({ forecast }) => {
-  console.log(forecast)
-
+const Forecast: React.FC<IForecast> = ({ forecast, index }) => {
   const today = moment.utc().hour(12).minute(0)
   const tomorrow = moment(today).add(1, 'days')
   const afterTomorrow = moment(today).add(2, 'days')
@@ -22,7 +21,7 @@ const Forecast: React.FC<IForecast> = ({ forecast }) => {
   }
 
   return (
-    <ForecastStyled>
+    <ForecastStyled index={index}>
       <h2 className="city-name">{forecast.city.name}</h2>
       <ForecastCard title="Today" weather={forecast.list[0]} />
       <ForecastCard title="Tomorrow" weather={findForecastByDate(tomorrow)} />
