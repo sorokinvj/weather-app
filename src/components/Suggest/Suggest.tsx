@@ -1,6 +1,9 @@
 // core
 import React, { useState, useMemo } from 'react'
 
+// context actions
+import { useSearchDispatch, fetchWeather } from '../../context/SearchResultsProvider'
+
 // hooks
 import { useDebounce } from 'use-debounce'
 
@@ -20,11 +23,9 @@ const findCityIdByName = (name: string) => {
   }
 }
 
-interface ISuggest {
-  selectCityID: (cityID: number) => void
-}
+interface ISuggest {}
 
-const Suggest: React.FC<ISuggest> = ({ selectCityID }) => {
+const Suggest: React.FC<ISuggest> = () => {
   // input handlers
   const [value, setValue] = useState('')
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,11 +36,13 @@ const Suggest: React.FC<ISuggest> = ({ selectCityID }) => {
 
   const [errorState, setError] = useState<string | undefined>(undefined)
 
+  const dispatch = useSearchDispatch()
+
   // form handlers
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     try {
-      selectCityID(findCityIdByName(value))
+      fetchWeather(dispatch, findCityIdByName(value))
       setValue('')
     } catch (error) {
       setError(error.message)
@@ -58,7 +61,7 @@ const Suggest: React.FC<ISuggest> = ({ selectCityID }) => {
   const selectCity = (id: number, name: string) => {
     selectSuggestOption(true)
     setValue(name)
-    selectCityID(id)
+    fetchWeather(dispatch, id)
     setValue('')
   }
 

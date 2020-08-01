@@ -6,20 +6,25 @@ export const ForecastStyled = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 12rem;
+  &:not(:last-of-type) {
+    margin-bottom: 3rem;
+  }
   .city-name {
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
     line-height: 34px;
     color: #000000;
+    flex: 1;
   }
 `
 export const ForecastCardStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  &:not(:last-child) {
+    margin-right: 5rem;
+  }
   .day,
   .date {
     font-style: normal;
