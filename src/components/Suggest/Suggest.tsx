@@ -72,6 +72,7 @@ const Suggest: React.FC<ISuggest> = () => {
       className="city-option"
       onClick={selectCity.bind(null, data[index].id, data[index].name)}
       data-id={data[index].id}
+      title="suggest-option"
     >
       {data[index].name}
     </li>
