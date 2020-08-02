@@ -21,7 +21,7 @@ const Forecast: React.FC<IForecast> = ({ forecast, index }) => {
   }
 
   return (
-    <ForecastStyled index={index}>
+    <ForecastStyled index={index} className="forecast-city">
       <h2 className="city-name">{forecast.city.name}</h2>
       <ForecastCard title="Today" weather={forecast.list[0]} />
       <ForecastCard title="Tomorrow" weather={findForecastByDate(tomorrow)} />
