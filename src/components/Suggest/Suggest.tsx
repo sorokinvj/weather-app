@@ -12,7 +12,7 @@ import { FixedSizeList as List } from 'react-window'
 import { SuggestStyled } from './SuggestStyled'
 
 // data
-import cities from '../../ukCitiesSorted.json'
+import cities from './citiesUK.json'
 
 const findCityIdByName = (name: string) => {
   const foundCity = cities.find((city) => city.name.toLowerCase() === name.toLowerCase())
@@ -72,6 +72,7 @@ const Suggest: React.FC<ISuggest> = () => {
       className="city-option"
       onClick={selectCity.bind(null, data[index].id, data[index].name)}
       data-id={data[index].id}
+      title="suggest-option"
     >
       {data[index].name}
     </li>
