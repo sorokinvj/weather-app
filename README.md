@@ -1,6 +1,7 @@
 # Weather App
 
 The app allows users to input a UK city and get a 3 day Weather Forecast from OpenWeather
+The list of UK cities is prepared and included in the app
 
 ## Run the project
 
@@ -8,9 +9,9 @@ The app allows users to input a UK city and get a 3 day Weather Forecast from Op
 
 Create .env file on the project root level and add API key via REACT_APP_WEATHER_API_KEY:
 
-'''
+```
 REACT_APP_WEATHER_API_KEY=5131090e770e50547e63d134d3b19a9a
-'''
+```
 
 ### `yarn start`
 
@@ -22,9 +23,13 @@ You will also see any lint errors in the console.
 
 ## Run tests
 
-### `yarn test`
+### Unit tests`yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
+Launches the Jest test runner in the interactive watch mode.
+
+### E2E tests `yarn run cypress open`
+
+Launches Cypress with two test suites - weatherAppSuccess and weatherAppError
 
 ## Build the project
 
