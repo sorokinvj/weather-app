@@ -65,7 +65,7 @@ interface IProviderProps {
 
 /* Note: exporting this because it's useful in tests */
 export const SearchStateContext = React.createContext<IState | undefined>(undefined)
-const SearchDispatchContext = React.createContext<IDispatch | undefined>(undefined)
+export const SearchDispatchContext = React.createContext<IDispatch | undefined>(undefined)
 
 const SearchResultsProvider = ({ children }: IProviderProps) => {
   const [state, dispatch] = React.useReducer<IReducer>(reducer, {
