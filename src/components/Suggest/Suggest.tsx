@@ -23,9 +23,7 @@ const findCityIdByName = (name: string) => {
   }
 }
 
-interface ISuggest {}
-
-const Suggest: React.FC<ISuggest> = () => {
+const Suggest: React.FC = () => {
   // input handlers
   const [value, setValue] = useState('')
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {

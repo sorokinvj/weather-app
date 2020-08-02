@@ -18,7 +18,7 @@ const App: React.FC = () => {
     <SearchResultsProvider>
       <GlobalStyles />
       <AppStyled data-testid="app">
-        <h1 className="app-title">3-day Weather foreacast in UK</h1>
+        <h1 className="app-title">3-day weather forecast in the UK</h1>
         <Suggest />
         <SearchResults />
         <p className="thanks">
