@@ -84,7 +84,7 @@ const Suggest: React.FC<ISuggest> = () => {
           value={value}
           onChange={onChange}
           className="search-input"
-          placeholder="Type in the city name"
+          placeholder="Type in city name"
           alt="input city"
         />
         <button className="search-button" type="submit">
