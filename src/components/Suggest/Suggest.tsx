@@ -12,7 +12,7 @@ import { FixedSizeList as List } from 'react-window'
 import { SuggestStyled } from './SuggestStyled'
 
 // data
-import cities from './ukCitiesSorted.json'
+import cities from './citiesUK.json'
 
 const findCityIdByName = (name: string) => {
   const foundCity = cities.find((city) => city.name.toLowerCase() === name.toLowerCase())
