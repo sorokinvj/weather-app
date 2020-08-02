@@ -1,7 +1,7 @@
 # Weather App
 
-The app allows users to input a UK city and get a 3 day Weather Forecast from OpenWeather
-The list of UK cities is prepared and included in the app
+The app allows users to input a UK city and get a 3 day Weather Forecast from OpenWeather.
+The list of UK cities is downloaded from OpenWeather, prepared (minified, cleaned) and included in the app.
 
 ## Run the project
 
