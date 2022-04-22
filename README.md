@@ -1,13 +1,13 @@
 # Weather App
 
-The app allows users to input a UK city and get a 3 day Weather Forecast from OpenWeather.
-The list of UK cities is downloaded from OpenWeather, prepared (minified, cleaned) and included in the app.
+Type in a UK city and get a 3 day Weather Forecast from OpenWeather.
+The list of UK cities is downloaded from OpenWeather, prepared (minified, cleaned) and included in the repository.
 
 ## Run the project
 
 ### Add API key
 
-Create .env file on the project root level and add API key via REACT_APP_WEATHER_API_KEY:
+Create .env file in the project root folder and add API key via REACT_APP_WEATHER_API_KEY:
 
 ```
 REACT_APP_WEATHER_API_KEY=5131090e770e50547e63d134d3b19a9a
@@ -15,11 +15,11 @@ REACT_APP_WEATHER_API_KEY=5131090e770e50547e63d134d3b19a9a
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+You will see linting errors in the browser console if any.
 
 ## Run tests
 
@@ -35,7 +35,5 @@ Launches Cypress with two test suites - weatherAppSuccess and weatherAppError
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
+Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
