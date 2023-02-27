@@ -10,7 +10,7 @@ The list of UK cities is downloaded from OpenWeather, prepared (minified, cleane
 Create .env file in the project root folder and add API key via REACT_APP_WEATHER_API_KEY:
 
 ```
-REACT_APP_WEATHER_API_KEY=5131090e770e50547e63d134d3b19a9a
+REACT_APP_WEATHER_API_KEY=<your API key to the weather api>
 ```
 
 ### `yarn start`
